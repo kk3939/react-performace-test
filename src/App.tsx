@@ -7,8 +7,10 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Wrapper>
+        <h2>Only React.Memo</h2>
         <ContainerOne />
         <Spacer />
+        <h2>React.memo and useCallback</h2>
         <ContainerTwo />
       </Wrapper>
     </div>

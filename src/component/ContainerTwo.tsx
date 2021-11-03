@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import ChildTwo from "./ChildTwo";
 
 const ContainerTwo: React.FC = () => {
@@ -6,9 +6,10 @@ const ContainerTwo: React.FC = () => {
   const [containerNum, setContanerNum] = useState<number>(0);
   const [childNum, setChildNum] = useState<number>(0);
 
-  const alertChildNum = (): void => {
-    alert(childNum);
-  };
+  const alertChildNum = useCallback(() => {
+    alert("click");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
@@ -19,7 +20,7 @@ const ContainerTwo: React.FC = () => {
         countup Child count
       </button>
       <p>App: {containerNum}</p>
-      <ChildTwo num={childNum} alertChildNum={() => alertChildNum()} />
+      <ChildTwo num={childNum} alertChildNum={alertChildNum} />
     </>
   );
 };
