@@ -1,10 +1,10 @@
 import React from "react";
-import Container from "./component/Container";
+import ContainerOne from "./component/ContainerOne";
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Container />
+      <ContainerOne />
     </div>
   );
 };

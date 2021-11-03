@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Child from "./Child";
+import ChildOne from "./ChildOne";
 
-const Container: React.FC = () => {
+const ContainerOne: React.FC = () => {
   console.log("render container!");
   const [containerNum, setContanerNum] = useState<number>(0);
   const [childNum, setChildNum] = useState<number>(0);
@@ -15,9 +15,9 @@ const Container: React.FC = () => {
         countup Child count
       </button>
       <p>App: {containerNum}</p>
-      <Child num={childNum} />
+      <ChildOne num={childNum} />
     </>
   );
 };
 
-export default Container;
+export default ContainerOne;
