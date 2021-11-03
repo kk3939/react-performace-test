@@ -4,6 +4,7 @@ type Props = {
   alertChildNum: () => void;
 };
 
+// 子でmemoして親でuseCallbackしてなんぼ
 // eslint-disable-next-line react/display-name
 const ChildTwo: React.FC<Props> = React.memo(({ num, alertChildNum }) => {
   console.log("render child component");

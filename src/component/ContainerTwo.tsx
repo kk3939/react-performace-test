@@ -6,6 +6,7 @@ const ContainerTwo: React.FC = () => {
   const [containerNum, setContanerNum] = useState<number>(0);
   const [childNum, setChildNum] = useState<number>(0);
 
+  // useCallbackで関数の生成を制御
   const alertChildNum = useCallback(() => {
     alert("click");
     // eslint-disable-next-line react-hooks/exhaustive-deps
