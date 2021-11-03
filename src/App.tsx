@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ContainerOne from "./component/ContainerOne";
+import ContainerThree from "./component/ContainerThree";
 import ContainerTwo from "./component/ContainerTwo";
 
 const App: React.FC = () => {
@@ -12,6 +13,10 @@ const App: React.FC = () => {
         <Spacer />
         <h2>React.memo and useCallback</h2>
         <ContainerTwo />
+        <Spacer />
+        <h2>useMemo</h2>
+        <ContainerThree />
+        <Spacer />
       </Wrapper>
     </div>
   );
